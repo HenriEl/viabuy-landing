@@ -1,0 +1,23 @@
+footer {
+    background-color: $footer_color;
+    padding: 5rem 0;
+
+    p {
+        color: #8E8E8D;
+        font-size: .75rem;
+        line-height: 1.666em;
+    }
+
+    ul {
+        li {
+            list-style-type: none;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.125rem;
+                line-height: 2.222em;
+            }
+        }
+    }
+}

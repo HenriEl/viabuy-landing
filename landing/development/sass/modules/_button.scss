@@ -1,0 +1,14 @@
+.button {
+    font-weight: 600;
+    font-size: .875em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: .5em 1.25em;
+    border-radius: 6px;
+
+    &-primary {
+        color: $base_color;
+        background-color: $main_yellow;
+    }
+}

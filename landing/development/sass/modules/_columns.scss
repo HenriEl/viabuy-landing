@@ -1,0 +1,67 @@
+.row {
+
+    &-bottom-section {
+        border-top: 1px solid #dfdfdf;
+        margin-top: 6.25rem;
+        text-align: center;
+        padding: 4.375rem 0 3.3rem 0;
+    }
+
+    &-gutters > div{
+        box-sizing: border-box;
+
+        @include mobileWidth {
+            padding-right: 0;
+        }
+
+        @include tabletWidth {
+            padding-right: 65px;
+        }
+    }
+
+    @include tabletWidth {
+        .col-4 {
+            float: left;
+            width: 33.3%;
+        }
+
+        .col-5 {
+            float: left;
+            width: 41.666%;
+        }
+
+        .col-6 {
+            float: left;
+            width: 50%;
+        }
+
+        .col-7 {
+            float: left;
+            width: 58.333%;
+        }
+    
+        .col-8 {
+            float: left;
+            width: 66.6%;
+        }
+    
+    }
+
+    /**
+    *   Equal height rules
+    */    
+
+    &-equal-height-desktop {
+        @include tabletWidth {
+            display: flex;
+        }
+
+        & > div {
+            float: none;
+            //display: flex;
+        }
+    }
+
+    @include clearfix;
+
+}

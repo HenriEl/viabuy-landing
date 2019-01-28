@@ -1,0 +1,36 @@
+.page-section {
+    padding: 6.25rem 0;
+}
+
+.grey-section {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.add-your-card {
+    .col-5 {
+        position: relative;
+
+        img {
+            position: absolute;
+            bottom: -6.25rem;
+        }
+    }
+}
+
+.dark-section {
+    background-color: #000;
+    color: #fff;
+
+    h4 {
+        margin: 0;
+    }
+
+    h6 {
+        margin: 1.5rem 0 3.125rem 0;
+    }
+}
+
+.no-padding-bottom {
+    padding-bottom: 0;
+}

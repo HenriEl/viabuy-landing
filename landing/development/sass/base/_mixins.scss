@@ -1,0 +1,25 @@
+@mixin mobileWidth {
+    @media (max-width: #{$mobile_width}) {
+        @content;
+    }
+}
+
+@mixin tabletWidth {
+    @media (min-width: #{$tablet_width}) {
+        @content;
+    }
+}
+
+@mixin desktopWidth {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin clearfix {
+    &::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+}

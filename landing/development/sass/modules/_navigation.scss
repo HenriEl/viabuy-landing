@@ -1,0 +1,50 @@
+.main-navigation {
+    padding: .6rem 0;
+    background-color: #f9f9f9;
+
+    .main-wrapper {
+        position: relative;
+    }
+
+    img.logo {
+        vertical-align: middle;
+    }
+
+    nav {
+        display: inline-block;
+
+        &.secondary-navigation {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &.main-navigation {
+            
+        }
+
+        ul {
+            display: inline-block;
+            li {
+                display: inline-block;
+                margin-right: 1rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+                
+                a {
+                    color: $base_color;
+                    text-decoration: none;  
+                }
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+}

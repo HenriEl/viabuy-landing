@@ -1,0 +1,48 @@
+.how-to-video {
+
+    h6 {
+        margin-bottom: 1rem;
+    }
+
+    img {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    &--item {
+        display: inline-block;
+        position: relative;
+        margin-right: 2.5rem;
+        text-align: center;
+
+        @include tabletWidth {
+            max-width: 11.3rem;
+        }
+
+        img {
+            width: auto;
+        }
+    }
+
+    .img-holder {
+        position: relative;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+
+        &::after {
+            content: '';
+            height: 65px;
+            width: 65px;
+            background: transparent url('/assets/images/video-play.png') center center no-repeat;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+            transform: translateY(-2px);
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.hero-section {
+    background: url('/assets/images/hero-background.png') center center no-repeat;
+    background-size: cover;
+    padding-bottom: 0;
+
+    h2.hero-title {
+        max-width: 50rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    p.hero-desc {
+        max-width: 36rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+    }
+
+    div.hero-app-view {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 8px);
+        
+        &::after {
+            display: block;
+            content: " ";
+            width: 227px;
+            height: 60px;
+            background: transparent url(/assets/images/viabuy-apple-pay-hero-icon.png) no-repeat;
+            background-size: contain;
+            position: absolute;
+            bottom: 6.25rem;
+            right: 0;
+            transform: translateX(120%);
+        }
+    }
+}
