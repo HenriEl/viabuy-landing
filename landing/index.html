@@ -14,10 +14,16 @@
             <nav class="lang-nav-mobile show-mobile">
                 <img src="assets/images/language-switcher.png" />
                 <ul>
-                    <li>Eng</li>
-                    <li>De</li>
+                    <li onclick="return false">
+                        Eng
+                        <ul>
+                            <li><a href="#">Deutsch</a></li>
+                            <li><a href="#">Italiano</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
+            <div class="show-mobile nav-burger" onclick="changeMenuClass(this)"></div>
             <nav class="main-navigation hide-mobile">
                 <ul>
                     <li><a href="#">Features</a></li>
@@ -40,6 +46,16 @@
                 </ul>
             </nav>
         </div>
+        <nav id="mobile-menu" class="show-mobile main-nav-mobile">
+            <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Activate Card</a></li>
+                <li><a href="#">Log in</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="hero-section page-section">
         <div class="main-wrapper">
@@ -55,8 +71,8 @@
         <div class="main-wrapper">
             <div class="row row-gutters row-equal-height-desktop move-image-down">
                 <div class="col-7">
-                    <h3>How to add your card</h3>
-                    <div class="card-devices icon-left">
+                    <h3 class="left-padding-title">How to add your card</h3>
+                    <div class="card-devices icon-left margin-top-mobile">
                         <h4>iPhone</h4>
                         <p>On iPhone, open the Wallet app and tap the plus sign.</p>
                     </div>
@@ -82,7 +98,11 @@
                     </div>
                 </div>
                 <div class="col-5">
-                    <img src="assets/images/mobile-hand.png" alt="Add a card mobile screen.">
+                    <picture>
+                        <source srcset="assets/images/mobile-hand-cropped.png" media="(max-width: 768px)">
+                        <source srcset="assets/images/mobile-hand.png" media="(min-width: 769px)">
+                        <img src="assets/images/mobile-hand.png" alt="Add a card mobile screen.">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -94,7 +114,7 @@
                     <img class="align-right" src="assets/images/apple-pay-app-view.png" alt="VIABUY phone app.">
                 </div>
                 <div class="col-6">
-                    <h3>How to pay</h3>
+                    <h3 class="center-mobile">How to pay</h3>
                     <p>Apple Pay is the easiest way to pay in stores, in apps, and online with your iPhone, Apple Watch, iPad, and Mac.</p>
                     <p>Spending money shouldn’t mean spending more time at the register or entering your card details online or in your app.</p>
                     <p>With Apple Pay, you can pay quickly with the devices you use every day.</p>

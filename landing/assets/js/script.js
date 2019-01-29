@@ -15,3 +15,9 @@ function windowOnClick(event) {
 openModal.addEventListener("click", toggleModal);
 closeModal.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
+
+
+function changeMenuClass(navClass) {
+    navClass.classList.toggle("close-nav");
+    document.getElementById("mobile-menu").classList.toggle("show-menu");
+}
