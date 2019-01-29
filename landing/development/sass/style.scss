@@ -6,7 +6,7 @@
 @import 'base/mixins';
 @import 'base/typography';
 @import 'base/layout';
-@import 'base/general';
+
 
 /**
 *   Modules
@@ -19,3 +19,10 @@
 @import 'modules/card-devices';
 @import 'modules/how-to-videos';
 @import 'modules/footer';
+@import 'modules/modal';
+
+
+/**
+*   General styles
+*/
+@import 'base/general';

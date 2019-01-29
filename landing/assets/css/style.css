@@ -400,6 +400,9 @@ body, html {
   line-height: 1.75em;
   letter-spacing: 0.03125em;
   color: #363636; }
+  @media (max-width: 576px) {
+    body, html {
+      font-size: 14px; } }
 
 p {
   margin-bottom: 1rem; }
@@ -414,6 +417,9 @@ h2 {
   line-height: 1.35em;
   letter-spacing: -0.5px;
   font-weight: 300; }
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.7125rem; } }
 
 h3 {
   font-size: 3rem;
@@ -426,64 +432,41 @@ h4 {
   line-height: 1.35em;
   letter-spacing: 0.25px;
   font-weight: 400; }
+  @media (max-width: 576px) {
+    h4 {
+      font-size: 1.715rem; } }
 
 h5 {
   font-size: 1.5rem;
   letter-spacing: 0px;
   font-weight: 400; }
+  @media (max-width: 576px) {
+    h5 {
+      font-size: 1rem; } }
 
 h6 {
   font-size: 1.25rem;
   letter-spacing: 0.25px;
   font-weight: 400; }
+  @media (max-width: 576px) {
+    h6 {
+      font-size: 1rem; } }
 
 .main-wrapper {
   max-width: 1200px;
   margin: 0 auto; }
-
-.center {
-  text-align: center; }
-
-.icon-left {
-  position: relative; }
-  .icon-left h3 {
-    margin-top: 0; }
-  .icon-left::before {
-    display: block;
-    content: '';
-    height: 65px;
-    width: 65px;
-    background: transparent url("/assets/images/apple-pay-icon.png") center center no-repeat;
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    -webkit-transform: translateX(-150%);
-            transform: translateX(-150%); }
-
-.align-right {
-  float: right; }
-  .align-right::after::after {
-    content: '';
-    clear: both;
-    display: table; }
-
-.apple-pay-illustration {
-  max-width: 372px; }
-
-.center-content {
-  text-align: center; }
-
-.move-image-down .col-5 {
-  position: relative; }
-  .move-image-down .col-5 img {
-    position: absolute;
-    bottom: -6.25rem; }
+  @media (max-width: 576px) {
+    .main-wrapper {
+      padding: 0 2.08rem; } }
 
 /**
 *   Modules
 */
 .page-section {
   padding: 6.25rem 0; }
+  @media (max-width: 576px) {
+    .page-section {
+      padding: 2.85rem 0; } }
 
 .grey-section {
   background-color: #f9f9f9;
@@ -494,6 +477,10 @@ h6 {
   .add-your-card .col-5 img {
     position: absolute;
     bottom: -6.25rem; }
+    @media (max-width: 576px) {
+      .add-your-card .col-5 img {
+        position: static;
+        margin-bottom: -2.85rem; } }
 
 .dark-section {
   background-color: #000;
@@ -502,6 +489,9 @@ h6 {
     margin: 0; }
   .dark-section h6 {
     margin: 1.5rem 0 3.125rem 0; }
+    @media (max-width: 576px) {
+      .dark-section h6 {
+        margin: 1.5rem 0 2.15rem 0; } }
 
 .no-padding-bottom {
   padding-bottom: 0; }
@@ -525,12 +515,55 @@ h6 {
       display: inline-block; }
       .main-navigation nav ul li {
         display: inline-block;
-        margin-right: 1rem; }
+        margin-right: 1rem;
+        position: relative; }
+        .main-navigation nav ul li ul.sub-menu {
+          opacity: 0;
+          background-color: #fff;
+          padding: .5em 0;
+          border-radius: 3px;
+          position: absolute;
+          left: 50%;
+          -webkit-transform: translate(-50%, -10px);
+                  transform: translate(-50%, -10px);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+          transition: all .2s ease-in-out .2s;
+          box-sizing: border-box; }
+          .main-navigation nav ul li ul.sub-menu::before {
+            content: "";
+            display: block;
+            background-color: #fff;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            -webkit-transform: translate(-50%, 50%) rotate(45deg);
+                    transform: translate(-50%, 50%) rotate(45deg); }
+          .main-navigation nav ul li ul.sub-menu li {
+            display: block;
+            margin-right: 0;
+            text-align: center; }
+            .main-navigation nav ul li ul.sub-menu li:hover a {
+              background-color: #f9f9f9; }
+            .main-navigation nav ul li ul.sub-menu li a {
+              display: inline-block;
+              padding: .5em 1em;
+              margin: 0;
+              width: 100px; }
+        .main-navigation nav ul li:hover > ul.sub-menu {
+          opacity: 1;
+          -webkit-transform: translate(-50%, 12px);
+                  transform: translate(-50%, 12px);
+          transition: all .2s ease-in-out 0s; }
         .main-navigation nav ul li:last-child {
           margin-right: 0; }
         .main-navigation nav ul li a {
           color: #363636;
-          text-decoration: none; }
+          text-decoration: none;
+          transition: color .05s linear; }
+          .main-navigation nav ul li a:hover {
+            color: #000; }
   .main-navigation::after {
     content: '';
     clear: both;
@@ -562,13 +595,24 @@ h6 {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem; }
+    @media (max-width: 576px) {
+      .hero-section p.hero-desc {
+        margin-bottom: 0.714rem; } }
   .hero-section div.hero-app-view {
     display: inline-block;
     position: relative;
     left: 50%;
     -webkit-transform: translate(-50%, 8px);
             transform: translate(-50%, 8px); }
-    .hero-section div.hero-app-view::after {
+    @media (max-width: 576px) {
+      .hero-section div.hero-app-view {
+        position: static;
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        width: 100%; }
+        .hero-section div.hero-app-view img {
+          width: 100%; } }
+    .hero-section div.hero-app-view::before {
       display: block;
       content: " ";
       width: 227px;
@@ -580,6 +624,17 @@ h6 {
       right: 0;
       -webkit-transform: translateX(120%);
               transform: translateX(120%); }
+      @media (max-width: 576px) {
+        .hero-section div.hero-app-view::before {
+          position: relative;
+          top: 0;
+          left: 50%;
+          margin-bottom: 1rem;
+          display: inline-block;
+          -webkit-transform: translateX(-50%);
+                  transform: translateX(-50%);
+          width: 175px;
+          height: 46px; } }
 
 .row {
   /**
@@ -590,6 +645,10 @@ h6 {
     margin-top: 6.25rem;
     text-align: center;
     padding: 4.375rem 0 3.3rem 0; }
+    @media (max-width: 576px) {
+      .row-bottom-section {
+        padding: 2rem 0;
+        margin-top: 0; } }
   .row-gutters > div {
     box-sizing: border-box; }
     @media (max-width: 576px) {
@@ -643,11 +702,15 @@ h6 {
   position: relative;
   margin-right: 2.5rem;
   text-align: center; }
+  @media (max-width: 576px) {
+    .how-to-video--item {
+      margin-right: 0;
+      margin-bottom: 2rem; } }
   @media (min-width: 768px) {
     .how-to-video--item {
       max-width: 11.3rem; } }
   .how-to-video--item img {
-    width: auto; }
+    width: 100%; }
 
 .how-to-video .img-holder {
   position: relative;
@@ -671,6 +734,9 @@ h6 {
 footer {
   background-color: #3C3C3B;
   padding: 5rem 0; }
+  @media (max-width: 576px) {
+    footer {
+      padding: 2.5rem; } }
   footer p {
     color: #8E8E8D;
     font-size: .75rem;
@@ -682,3 +748,128 @@ footer {
       text-decoration: none;
       font-size: 1.125rem;
       line-height: 2.222em; }
+  footer .logo-footer {
+    width: 100%;
+    text-align: center; }
+    footer .logo-footer img {
+      max-width: 116px; }
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s linear 0.2s, opacity 0.2s 0s; }
+  .modal .modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 1rem 2rem;
+    width: 50rem; }
+    @media (max-width: 576px) {
+      .modal .modal-container {
+        width: 100vw; } }
+  .modal .close-modal {
+    float: right;
+    font-size: 1.5rem;
+    width: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #eee;
+    border-radius: 1rem;
+    background-color: #f9f9f9;
+    transition: all .075s linear; }
+    .modal .close-modal:hover {
+      border-color: #000;
+      background-color: #000;
+      color: #fff; }
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s linear 0s, opacity 0.2s 0s, popup .2s; }
+
+/**
+*   General styles
+*/
+.center {
+  text-align: center; }
+
+.icon-left {
+  position: relative; }
+  .icon-left h3 {
+    margin-top: 0; }
+  .icon-left::before {
+    display: block;
+    content: '';
+    height: 65px;
+    width: 65px;
+    background: transparent url("/assets/images/apple-pay-icon.png") center center no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%); }
+    @media (max-width: 576px) {
+      .icon-left::before {
+        position: static;
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        margin-bottom: 1rem; } }
+
+.align-right {
+  float: right; }
+  .align-right::after::after {
+    content: '';
+    clear: both;
+    display: table; }
+
+.apple-pay-illustration {
+  max-width: 372px; }
+  @media (max-width: 576px) {
+    .apple-pay-illustration {
+      max-width: 246px; } }
+
+.center-content {
+  text-align: center; }
+
+.move-image-down .col-5 {
+  position: relative; }
+  .move-image-down .col-5 img {
+    position: absolute;
+    bottom: -6.25rem; }
+    @media (max-width: 576px) {
+      .move-image-down .col-5 img {
+        position: static;
+        margin-bottom: -3.35rem;
+        width: 100%; } }
+
+@media (max-width: 576px) {
+  .hide-mobile {
+    display: none !important; } }
+
+@media (min-width: 768px) {
+  .hide-mobile {
+    display: inline-block; } }
+
+@media (max-width: 576px) {
+  .show-mobile {
+    display: inline-block !important; } }
+
+@media (min-width: 768px) {
+  .show-mobile {
+    display: none !important; } }
+
+.phone-screen-mobile {
+  width: 100%;
+  padding: 1.9rem !important; }
+  .phone-screen-mobile img {
+    width: 100%; }

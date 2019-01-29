@@ -4,6 +4,10 @@ body, html {
     line-height: $base_line-height;
     letter-spacing: $base_letter-spacing;
     color: $base_color;
+
+    @include mobileWidth {
+        font-size: 14px;
+    }
 }
 
 p {
@@ -21,6 +25,10 @@ h2 {
     line-height: $h2_line-height;
     letter-spacing: $h2_letter-spacing;
     font-weight: $h2_weight;
+
+    @include mobileWidth {
+        font-size: 1.7125rem
+    }
 }
 
 h3 {
@@ -35,16 +43,28 @@ h4 {
     line-height: $h4_line-height;
     letter-spacing: $h4_letter-spacing;
     font-weight: $h4_weight;
+
+    @include mobileWidth {
+        font-size: 1.715rem;
+    }
 }
 
 h5 {
     font-size: $h5_font-size;
     letter-spacing: $h5_letter-spacing;
     font-weight: $h5_weight;
+
+    @include mobileWidth {
+        font-size: 1rem;
+    }
 }
 
 h6 {
     font-size: $h6_font-size;
     letter-spacing: $h6_letter-spacing;
     font-weight: $h6_weight;
+
+    @include mobileWidth {
+        font-size: 1rem;
+    }
 }

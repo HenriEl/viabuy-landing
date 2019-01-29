@@ -2,6 +2,10 @@ footer {
     background-color: $footer_color;
     padding: 5rem 0;
 
+    @include mobileWidth {
+        padding: 2.5rem;
+    }
+
     p {
         color: #8E8E8D;
         font-size: .75rem;
@@ -18,6 +22,15 @@ footer {
                 font-size: 1.125rem;
                 line-height: 2.222em;
             }
+        }
+    }
+
+    .logo-footer {
+        width: 100%;
+        text-align: center;
+
+        img {
+            max-width: 116px;
         }
     }
 }

@@ -29,6 +29,56 @@
             li {
                 display: inline-block;
                 margin-right: 1rem;
+                position: relative;
+
+                ul.sub-menu {
+                    opacity: 0;
+                    background-color: #fff;
+                    padding: .5em 0;
+                    border-radius: 3px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%, -10px);
+                    box-shadow: 0 0 5px rgba(0, 0, 0, .05);
+                    transition: all .2s ease-in-out .2s;
+                    box-sizing: border-box;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        background-color: #fff;
+                        width: 12px;
+                        height: 12px;
+                        position: absolute;
+                        top: -12px;
+                        left: 50%;
+                        transform: translate(-50%, 50%) rotate(45deg);
+                    }
+
+                    li {
+                        display: block;
+                        margin-right: 0;
+                        text-align: center;
+                        
+                        &:hover a {
+                            
+                            background-color: #f9f9f9;
+                        }
+
+                        a {
+                            display: inline-block;
+                            padding: .5em 1em;
+                            margin: 0;
+                            width: 100px;
+                        }
+                    }
+                }
+
+                &:hover > ul.sub-menu {
+                    opacity: 1;
+                    transform: translate(-50%, 12px);
+                    transition: all .2s ease-in-out 0s;
+                }
 
                 &:last-child {
                     margin-right: 0;
@@ -36,7 +86,12 @@
                 
                 a {
                     color: $base_color;
-                    text-decoration: none;  
+                    text-decoration: none;
+                    transition: color .05s linear;
+
+                    &:hover {
+                        color: #000;
+                    }
                 }
             }
         }

@@ -19,6 +19,12 @@
         position: absolute;
         top: 0;
         transform: translateX(-150%);
+
+        @include mobileWidth {
+            position: static;
+            transform: translateX(0);
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -32,6 +38,10 @@
 
 .apple-pay-illustration {
     max-width: 372px;
+
+    @include mobileWidth {
+        max-width: 246px;
+    }
 }
 
 .center-content {
@@ -45,6 +55,43 @@
         img {
             position: absolute;
             bottom: -6.25rem;
+
+            @include mobileWidth {
+                position: static;
+                margin-bottom: -3.35rem;
+                width: 100%;
+            }
         }
+    }
+}
+
+.hide-mobile {
+
+    @include mobileWidth {
+        display: none !important;
+    }
+
+    @include tabletWidth {
+        display: inline-block;
+    }
+}
+
+.show-mobile {
+
+    @include mobileWidth {
+        display: inline-block !important;
+    }
+
+    @include tabletWidth {
+        display: none !important;
+    }
+}
+
+.phone-screen-mobile {
+    width: 100%;
+    padding: 1.9rem !important;
+
+    img {
+        width: 100%;
     }
 }

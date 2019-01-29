@@ -1,5 +1,9 @@
 .page-section {
     padding: 6.25rem 0;
+
+    @include mobileWidth {
+        padding: 2.85rem 0;
+    }
 }
 
 .grey-section {
@@ -14,6 +18,11 @@
         img {
             position: absolute;
             bottom: -6.25rem;
+
+            @include mobileWidth {
+                position: static;
+                margin-bottom: -2.85rem;
+            }
         }
     }
 }
@@ -28,6 +37,10 @@
 
     h6 {
         margin: 1.5rem 0 3.125rem 0;
+
+        @include mobileWidth {
+            margin: 1.5rem 0 2.15rem 0;
+        }
     }
 }
 
