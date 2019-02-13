@@ -158,7 +158,7 @@
             width: 17px;
             height: 24px;
             display: inline-block;
-            background: transparent url('/assets/images/arrow-down.png') center center no-repeat;
+            background: transparent url('../../assets/images/arrow-down.png') center center no-repeat;
             position: absolute;
             right: -22px;
             top: 0;
@@ -170,12 +170,12 @@
         right: 2rem;
         width: 24px;
         height: 24px;
-        background: transparent url('/assets/images/nav-burger.png') center center no-repeat;
+        background: transparent url('../../assets/images/nav-burger.png') center center no-repeat;
         background-size: contain;
         cursor: pointer;
 
         &.close-nav {
-            background: transparent url('/assets/images/close-menu.png') center center no-repeat;
+            background: transparent url('../../assets/images/close-menu.png') center center no-repeat;
             background-size: 80%;
         }
     }

@@ -24,6 +24,18 @@
         }
     }
 
+    &-gutters-larger > div {
+        box-sizing: border-box;
+
+        @include mobileWidth {
+            padding-right: 0;
+        }
+
+        @include tabletWidth {
+            padding-right: 89px;
+        }
+    }
+
     @include tabletWidth {
         .col-4 {
             float: left;

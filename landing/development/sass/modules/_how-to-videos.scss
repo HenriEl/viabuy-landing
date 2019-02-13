@@ -16,7 +16,7 @@
     &--item {
         display: inline-block;
         position: relative;
-        margin-right: 2.5rem;
+        margin-right: 2rem;
         text-align: center;
 
         @include mobileWidth {
@@ -44,7 +44,7 @@
             content: '';
             height: 65px;
             width: 65px;
-            background: transparent url('/assets/images/video-play.png') center center no-repeat;
+            background: transparent url('../../assets/images/video-play.png') center center no-repeat;
             position: absolute;
             top: 50%;
             left: 50%;

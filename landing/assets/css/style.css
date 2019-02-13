@@ -465,7 +465,7 @@ h6 {
       content: '';
       height: 75px;
       width: 75px;
-      background: transparent url(/assets/images/apple-pay-icon.png) center center no-repeat;
+      background: transparent url("../../assets/images/apple-pay-icon.png") center center no-repeat;
       background-size: contain;
       position: absolute;
       top: 0;
@@ -477,6 +477,8 @@ h6 {
   @media (max-width: 576px) {
     .main-wrapper {
       padding: 0 2.08rem; } }
+  .main-wrapper--smaller {
+    max-width: 1000px; }
 
 /**
 *   Modules
@@ -626,7 +628,7 @@ h6 {
       width: 17px;
       height: 24px;
       display: inline-block;
-      background: transparent url("/assets/images/arrow-down.png") center center no-repeat;
+      background: transparent url("../../assets/images/arrow-down.png") center center no-repeat;
       position: absolute;
       right: -22px;
       top: 0; }
@@ -635,11 +637,11 @@ h6 {
     right: 2rem;
     width: 24px;
     height: 24px;
-    background: transparent url("/assets/images/nav-burger.png") center center no-repeat;
+    background: transparent url("../../assets/images/nav-burger.png") center center no-repeat;
     background-size: contain;
     cursor: pointer; }
     .main-navigation div.nav-burger.close-nav {
-      background: transparent url("/assets/images/close-menu.png") center center no-repeat;
+      background: transparent url("../../assets/images/close-menu.png") center center no-repeat;
       background-size: 80%; }
   .main-navigation .main-nav-mobile {
     position: absolute;
@@ -688,7 +690,7 @@ h6 {
     background-color: #FAB216; }
 
 .hero-section {
-  background: url("/assets/images/hero-background.png") center center no-repeat;
+  background: url("../../assets/images/hero-background.png") center center no-repeat;
   background-size: cover;
   padding-bottom: 0; }
   .hero-section h2.hero-title {
@@ -717,16 +719,17 @@ h6 {
                 transform: translateX(0);
         width: 100%; }
         .hero-section div.hero-app-view img {
-          width: 100%; } }
+          width: 100%;
+          vertical-align: bottom; } }
     .hero-section div.hero-app-view::before {
       display: block;
       content: " ";
       width: 227px;
       height: 60px;
-      background: transparent url(/assets/images/viabuy-apple-pay-hero-icon.png) no-repeat;
+      background: transparent url("../../assets/images/viabuy-apple-pay-hero-icon.png") no-repeat;
       background-size: contain;
       position: absolute;
-      bottom: 6.25rem;
+      bottom: 3.875rem;
       right: 0;
       -webkit-transform: translateX(120%);
               transform: translateX(120%); }
@@ -763,6 +766,14 @@ h6 {
     @media (min-width: 768px) {
       .row-gutters > div {
         padding-right: 65px; } }
+  .row-gutters-larger > div {
+    box-sizing: border-box; }
+    @media (max-width: 576px) {
+      .row-gutters-larger > div {
+        padding-right: 0; } }
+    @media (min-width: 768px) {
+      .row-gutters-larger > div {
+        padding-right: 89px; } }
   @media (min-width: 768px) {
     .row .col-4 {
       float: left;
@@ -805,7 +816,7 @@ h6 {
     content: '';
     height: 65px;
     width: 65px;
-    background: transparent url("/assets/images/apple-pay-icon.png") center center no-repeat;
+    background: transparent url("../../assets/images/apple-pay-icon.png") center center no-repeat;
     background-size: contain;
     position: absolute;
     top: 0;
@@ -828,7 +839,7 @@ h6 {
 .how-to-video--item {
   display: inline-block;
   position: relative;
-  margin-right: 2.5rem;
+  margin-right: 2rem;
   text-align: center; }
   @media (max-width: 576px) {
     .how-to-video--item {
@@ -848,7 +859,7 @@ h6 {
     content: '';
     height: 65px;
     width: 65px;
-    background: transparent url("/assets/images/video-play.png") center center no-repeat;
+    background: transparent url("../../assets/images/video-play.png") center center no-repeat;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -899,26 +910,29 @@ footer {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     background-color: #fff;
-    padding: 1rem 2rem;
+    padding: 0;
     width: 50rem; }
     @media (max-width: 576px) {
       .modal .modal-container {
         width: 100vw; } }
-  .modal .close-modal {
-    float: right;
-    font-size: 1.5rem;
-    width: 2rem;
-    line-height: 2rem;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid #eee;
-    border-radius: 1rem;
-    background-color: #f9f9f9;
-    transition: all .075s linear; }
-    .modal .close-modal:hover {
-      border-color: #000;
-      background-color: #000;
-      color: #fff; }
+    .modal .modal-container video {
+      width: 100%;
+      height: 100%; }
+
+.close-modal {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  background: transparent url("../../assets/images/close-modal.png") center center no-repeat;
+  background-size: 80%;
+  cursor: pointer;
+  transition: all .075s linear;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 23; }
 
 .show-modal {
   opacity: 1;
@@ -990,3 +1004,6 @@ footer {
 @media (max-width: 576px) {
   .center-mobile {
     text-align: center; } }
+
+.full-width {
+  width: 100%; }

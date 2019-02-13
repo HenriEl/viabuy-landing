@@ -68,7 +68,7 @@
         </div>
     </div>
     <div class="page-section grey-section">
-        <div class="main-wrapper">
+        <div class="main-wrapper main-wrapper--smaller">
             <div class="row row-gutters row-equal-height-desktop move-image-down">
                 <div class="col-7">
                     <h3 class="left-padding-title">How to add your card</h3>
@@ -91,8 +91,12 @@
                     <div class="how-to-video">
                         <h6>Learn how to set up Apple Pay:</h6>
                         <div class="how-to-video--item">
-                            <div class="img-holder open-modal">
-                                <img src="assets/images/apple-pay-video.jpg" alt="Learn how to set up Apple Pay video.">
+                            <div id="open-video" class="img-holder open-modal">
+                                <picture>
+                                    <source srcset="assets/images/how-to-set-up-mobile.png" media="(max-width: 768px)">
+                                    <source srcset="assets/images/how-to-set-up-desktop.png" media="(min-width: 769px)">
+                                    <img src="assets/images/how-to-set-up-desktop.jpg" alt="Learn how to set up Apple Pay video.">
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -108,12 +112,12 @@
         </div>
     </div>
     <div class="page-section no-padding-bottom">
-        <div class="main-wrapper">
-            <div class="row row-gutters">
-                <div class="col-6 hide-mobile">
-                    <img class="align-right" src="assets/images/apple-pay-app-view.png" alt="VIABUY phone app.">
+        <div class="main-wrapper main-wrapper--smaller">
+            <div class="row row-gutters-larger">
+                <div class="col-5 hide-mobile">
+                    <img class="full-width" src="assets/images/apple-pay-app-view.png" alt="VIABUY phone app.">
                 </div>
-                <div class="col-6">
+                <div class="col-7">
                     <h3 class="center-mobile">How to pay</h3>
                     <p>Apple Pay is the easiest way to pay in stores, in apps, and online with your iPhone, Apple Watch, iPad, and Mac.</p>
                     <p>Spending money shouldn’t mean spending more time at the register or entering your card details online or in your app.</p>
@@ -122,20 +126,28 @@
                     <div class="how-to-video">
                         <h6>See how to pay in stores:</h6>
                             <div class="how-to-video--item">
-                                <div class="img-holder">
-                                        <img src="assets/images/apple-pay-video.jpg" alt="How to pay with an iPhone X using Face ID.">
+                                <div id="open-video-face-id" class="img-holder">
+                                    <picture>
+                                        <source srcset="assets/images/touch-id-mobile.png" media="(max-width: 768px)">
+                                        <source srcset="assets/images/touch-id-desktop.png" media="(min-width: 769px)">
+                                        <img src="assets/images/touch-id-desktop.jpg" alt="Learn how to set up Apple Pay video.">
+                                    </picture>
                                 </div>
                                 <span>With iPhoneX using Face ID</span>
                             </div>
                             <div class="how-to-video--item">
-                                <div class="img-holder">
-                                    <img src="assets/images/apple-pay-touch-id-video.jpg" alt="How to pay with an iPhone using Touch ID.">
+                                <div id="open-video-touch-id" class="img-holder">
+                                    <picture>
+                                        <source srcset="assets/images/video-face-id-mobile.png" media="(max-width: 768px)">
+                                        <source srcset="assets/images/video-face-id-desktop.png" media="(min-width: 769px)">
+                                        <img src="assets/images/video-face-id-desktop.jpg" alt="Learn how to set up Apple Pay video.">
+                                    </picture>
                                 </div>
                                 <span>With iPhone using Touch ID</span>
                             </div>
                     </div>
                 </div>
-                <div class="col-6 show-mobile phone-screen-mobile">
+                <div class="col-5 show-mobile phone-screen-mobile">
                         <img class="align-right" src="assets/images/apple-pay-app-view.png" alt="VIABUY phone app.">
                 </div>
             </div>
@@ -178,13 +190,14 @@
         </div>
     </footer>
     <!-- Modal box html -->
+    <span class="close-modal"></span>
     <div class="modal">
         <div class="modal-container">
-            <span class="close-modal">&times;</span>
-            <p>Video content here</p>
+            <video id="video-popup" width="auto" height="auto">
+                <source src="#" type="video/mp4">
+            </video>
         </div>
     </div>
-
     <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
