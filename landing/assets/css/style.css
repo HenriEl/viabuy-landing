@@ -519,11 +519,16 @@ h6 {
 
 .main-navigation {
   padding: .6rem 0;
-  background-color: #f9f9f9; }
+  background-color: #f9f9f9;
+  background-image: url("../../../assets/images/header-bg.jpg") repeat; }
   .main-navigation .main-wrapper {
     position: relative; }
   .main-navigation img.logo {
     vertical-align: middle; }
+    @media (min-width: 992px) {
+      .main-navigation img.logo {
+        float: right;
+        margin-top: 10px; } }
     @media (max-width: 576px) {
       .main-navigation img.logo {
         max-width: 86px; } }
@@ -537,10 +542,24 @@ h6 {
               transform: translateY(-50%); }
     .main-navigation nav ul {
       display: inline-block; }
+      @media (min-width: 992px) {
+        .main-navigation nav ul {
+          position: relative;
+          bottom: -35px;
+          background: none;
+          padding-left: 0; } }
+      @media (min-width: 768px) {
+        .main-navigation nav ul {
+          position: relative;
+          bottom: -35px;
+          background: none;
+          padding-left: 28px; } }
       .main-navigation nav ul li {
         display: inline-block;
         margin-right: 1rem;
-        position: relative; }
+        position: relative;
+        margin: 0 0 0 -35px;
+        padding: 0; }
         .main-navigation nav ul li ul.sub-menu {
           opacity: 0;
           background-color: #fff;
@@ -585,9 +604,28 @@ h6 {
         .main-navigation nav ul li a {
           color: #363636;
           text-decoration: none;
-          transition: color .05s linear; }
+          transition: color .05s linear;
+          display: inline-block;
+          height: 34px;
+          padding-right: 48px;
+          background: transparent url("../../../assets/images/menuButtonA.png") no-repeat scroll top right; }
+          .main-navigation nav ul li a span {
+            display: inline-block;
+            line-height: 34px;
+            padding: 0 10px 0 30px;
+            background: transparent url("../../../assets/images/menuButtonSpan.png") no-repeat; }
           .main-navigation nav ul li a:hover {
-            color: #000; }
+            color: #fff;
+            background: transparent url("../../../assets/images/menuButtonActiveA.png") no-repeat scroll top right; }
+            .main-navigation nav ul li a:hover span {
+              background: transparent url("../../../assets/images/menuButtonActiveSpan.png") no-repeat; }
+        .main-navigation nav ul li.active a {
+          color: #fff;
+          background: transparent url("../../../assets/images/menuButtonActiveA.png") no-repeat scroll top right; }
+          .main-navigation nav ul li.active a span {
+            background: transparent url("../../../assets/images/menuButtonActiveSpan.png") no-repeat; }
+        .main-navigation nav ul li.active a:hover {
+          color: #fff; }
     .main-navigation nav.lang-nav-mobile {
       position: absolute;
       left: 50%; }
@@ -953,6 +991,7 @@ footer {
     display: table; }
 
 .apple-pay-illustration {
+  margin-top: 16px;
   max-width: 372px; }
   @media (max-width: 576px) {
     .apple-pay-illustration {
@@ -1007,3 +1046,7 @@ footer {
 
 .full-width {
   width: 100%; }
+
+@media (min-width: 992px) {
+  .google-play-icon {
+    margin-right: 40px; } }
